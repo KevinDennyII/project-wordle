@@ -1,7 +1,7 @@
 import React from 'react';
 import GuessResults from "../GuessResults";
 
-function GuessInput({handleGuessInputs, guessInputs}) {
+function GuessInput({handleGuessInputs, guessInputs, answer}) {
   const [guessInput, setGuessInput] = React.useState('');
   function handleSubmit(event){
       event.preventDefault();
@@ -11,7 +11,7 @@ function GuessInput({handleGuessInputs, guessInputs}) {
   }
   return (
     <div>
-      <GuessResults guessInputs={guessInputs} />
+      <GuessResults answer={answer} guessInputs={guessInputs} />
       <form
         className="guess-input-wrapper"
         onSubmit={handleSubmit}

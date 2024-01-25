@@ -1,12 +1,20 @@
 import React from 'react';
 import {range} from "../../utils";
-import {NUM_OF_GUESSES_ALLOWED} from "../../constants";
+import { checkGuess } from '../../game-helpers';
+import { check } from 'prettier';
 
-function Guess({value}) {
+function Guess({value, answer}) {
+  let result;
+  if(value) result = checkGuess(value, answer);
+
   return (
     <p className="guess">
       {range(0,5).map(num =>(
-        <span key={num} className="cell">{value ? value[num] : undefined}</span>
+        <span 
+        key={num} 
+        className={`cell ${result ? result[num].status : ''}`}>
+          {value ? value[num] : undefined}
+          </span>
         ))}
     </p>
   );

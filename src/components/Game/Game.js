@@ -23,7 +23,7 @@ function Game() {
 
   return (
     <div>
-      <GuessInput handleGuessInputs={handleGuessInputs} guessInputs={guessInputs} />
+      <GuessInput answer={answer} handleGuessInputs={handleGuessInputs} guessInputs={guessInputs} />
     </div>
   );
 }
