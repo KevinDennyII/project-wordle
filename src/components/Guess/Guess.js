@@ -1,7 +1,6 @@
 import React from 'react';
 import {range} from "../../utils";
 import { checkGuess } from '../../game-helpers';
-import { check } from 'prettier';
 
 function Guess({value, answer}) {
   let result;
