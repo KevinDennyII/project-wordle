@@ -10,12 +10,15 @@ function Keyboard() {
 
   return (
   <div>
+    <span className="keyboard">
     {rows.map(row => {
-      return row.split(" ").map((key) =>{
-        return <button className="keyboard-hg-button" key={`key-${Math.random()}`}>{key}</button>
+      return (<span className="keyboard-row"> {row.split(" ").map((key) =>{
+        return <span className="letter" key={`key-${Math.random()}`}>{key}</span>
       })
+      }</span>)
     })
     }
+      </span>
   </div>
   );
 }
