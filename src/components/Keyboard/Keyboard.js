@@ -10,11 +10,10 @@ function Keyboard() {
 
   return (
   <div>
-    {rows.map((row) => {
-      row.split(" ").map((key) =>{
-        return <span key={`key-${Math.random()}`}>{key}</span>
+    {rows.map(row => {
+      return row.split(" ").map((key) =>{
+        return <button className="keyboard-hg-button" key={`key-${Math.random()}`}>{key}</button>
       })
-      // return <br />
     })
     }
   </div>
